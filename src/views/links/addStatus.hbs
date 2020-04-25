@@ -1,0 +1,118 @@
+<div class="division-container p-5">
+
+  <div class="row mt-5">
+    <div class="col-12 col-md-4 mb-3">
+      <main class="grid" role="main">
+        <div class="card">
+          <div class="card-graphic"><img src="/images/status.png" alt=""></div>
+          <h1 class="card-title">Agregar Estado</h1>
+          <form onclick="return addStatus()" role="form" method="POST" action="/links/addStatus">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+
+                  <input id="Cod_Estado" type="text" name="Cod_Estado" placeholder="Codigo Estado*" class="form-control"
+                    autofocus>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+
+              <div class="col-12">
+                <div class="form-group">
+
+                  <input id="Nombre_Estado" type="text" name="Nombre_Estado" placeholder="Descripcion Estado*"
+                    class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <button type="submit" class="card-button btn ">Guardar</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+
+
+
+      </main>
+    </div>
+
+    <div class="col-12 col-md-8 ">
+
+      <div class="card-2 mx-auto">
+
+        <div class="card-body">
+          <div class="table-responsive ">
+            <table class="table table-hover   mydatatable">
+
+              <thead>
+
+                <tr>
+
+                  <th class="text-left" colspan="4">
+                    <h3>Patacon Maja'o estados de eventos</h>
+                  </th>
+
+                </tr>
+                <tr>
+
+
+                  <th scope="col">Codigo Estado</th>
+                  <th scope="col">Descripcion Estado</th>
+                  <th scope="col">Borrar</th>
+                  <th scope="col">Nuevo</th>
+                </tr>
+              </thead>
+
+
+              <tbody>
+
+                {{#each status}}
+                <tr>
+
+
+                  <td>{{Cod_Estado}}</td>
+                  <td>{{Nombre_Estado}}</td>
+                  <td class="text-center"><a href="/links/deleteStatus/{{Cod_Estado}}" class="text-danger "
+                      role="button" aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+                  <td class="text-center"><a href="/links/editStatus/{{Cod_Estado}}" class="text-info" role="button"
+                      aria-pressed="true"><i class="far fa-edit"></i></a></td>
+
+                </tr>
+                {{/each}}
+              </tbody>
+
+
+
+            </table>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+</div>

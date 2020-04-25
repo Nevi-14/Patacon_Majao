@@ -1,0 +1,39 @@
+label{
+    float: left;
+}
+.card-header{
+    background-color: #23395D;
+    color: white;
+}
+.card{
+    border: none;
+}
+.logo-image{
+ 
+    width: 150px;
+    height: 150px;
+}
+.btnRegister{
+    float: right;
+    margin-top: 5%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #23395D;
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+ 
+}
+a:hover {
+    color: #FFF;
+    text-decoration: none;  
+}
+input[type="text"]:disabled{
+    background-color:#FFF;
+}
+#navBar {
+    background: #23395D !important;
+  
+  
+  }

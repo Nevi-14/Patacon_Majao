@@ -1,0 +1,113 @@
+body{
+  background-color: #e1e1e1;
+}
+
+
+
+#card{
+  border: none;
+}
+.invoice {
+ 
+  width: 100%;
+  padding: 50px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.document-type {
+  text-align: right;
+  color: #444;
+}
+
+.conditions {
+  font-size: 0.7em;
+  color: #666;
+}
+.logo-image{
+  height: 150px;
+  width: 150px;
+  
+  }
+.bottom-page {
+  font-size: 0.7em;
+}
+.card-header{
+ background-color: #FFF;
+border: none;
+color: black;
+
+
+}
+.card-footer{
+  background-color: #FFF;
+  border: none;
+ 
+ }
+
+ #navBar {
+  background: #23395D !important;
+
+
+}
+label{
+  float: left;
+}
+
+.logo-image{
+
+  width: 150px;
+  height: 150px;
+}
+.card-button{
+  float: right;
+  margin-top: 5%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 10px;
+  background: #23395D;
+  color: #fff;
+  font-weight: 600;
+  width: 150px;
+
+}
+.card-button:hover {
+  color: #FFF;
+  text-decoration: none;  
+}
+input[type="text"]:disabled{
+  background-color:#FFF;
+  outline : 0;
+  border: none;
+}
+
+#Cod_Cotizacion{
+  background-color:#FFF;
+  outline : none;
+  border: none;
+}
+
+
+.btnRegister{
+  float: right;
+  margin-top: 5%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1%;
+  background: #23395D;
+  color: #fff;
+  font-weight: 600;
+  width: 150px;
+
+}
+.btnRegister:hover {
+  color: #FFF;
+  text-decoration: none;  
+}
+.division-container{
+
+  padding: 3%;
+}

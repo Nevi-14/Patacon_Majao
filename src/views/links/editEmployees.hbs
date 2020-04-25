@@ -1,0 +1,65 @@
+<div class="division-container p-4">
+
+  <div class="row">
+    <div class="col-12 col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h4><i class="fas fa-user-edit mr-2"></i>Editar Empleado</h4>
+        </div>
+        <div class="card-body">
+               <form action="/links/editEmployees/{{editEmployees.Ced_Empleado}}" method="POST">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 ">
+                  <div class="form-group">
+                    <input  value="{{editEmployees.Ced_Empleado}}" name="Ced_Empleado" type="text" class="form-control" placeholder="Cedula *"
+                      />
+                  </div>
+                  <div class="form-group">
+                    <input value="{{editEmployees.Nom_Empleado}}"  required name="Nom_Empleado" type="text" class="form-control" placeholder="Nombre *"
+                      value="" />
+                  </div>
+                  <div class="form-group">
+                    <input  value="{{editEmployees.Primer_Apellido}}" required name="Primer_Apellido" type="text" class="form-control"
+                      placeholder="Primer Apellido *" value="" />
+                  </div>
+
+
+                  <div class="form-group">
+                    <input value="{{editEmployees.Segundo_Apellido}}" required name="Segundo_Apellido" type="text" class="form-control"
+                      placeholder="Segundo Apellido *" value="" />
+                  </div>
+                  <div class="form-group">
+                    <input value="{{editEmployees.Correo_Empleado}}" required name="Correo_Empleado" type="email" class="form-control" placeholder="Correo *"
+                      value="" />
+                  </div>
+
+                  <div class="form-group">
+                    <input value="{{editEmployees.Telefono_Empleado}}"  required name="Telefono_Empleado" type="text" class="form-control" placeholder="Telefono *"
+                      value="" />
+                  </div>
+
+                  <button class="btnRegister btn btn-outline-info"><i
+                      class="fas fa-user-edit mr-2"></i>Editar</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</div>

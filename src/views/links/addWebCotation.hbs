@@ -1,0 +1,69 @@
+<div class="division-container p-4 mt-5">
+    <div class="row ">
+        <div class="col-12 col-md-6">
+      <div class="row ">
+        <div class="col-12 d-flex justify-content-center">
+          <img  src="/images/chef-welcome.png" class="img-contact" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="color-text col-10">
+          <p class="contact-text text-center"> Nuestro interés es poder servirle como usted se lo merece. Le agradecemos que nos brinde la información de
+            contacto
+            para poder brindarle la cotizacion de nuestros productos y no pierda la oportunidad de probar nuestros
+            deliciosos patacones
+            a un muy buen precio.
+          <p>
+        </div>
+      </div>
+
+ 
+        </div>
+        <div class="col-12  col-md-4 mx-auto">	<div class="container-contact100">
+<div id="addQuotation"></div>
+		<div class="wrap-contact100">
+	       <form  onclick="return  validateForm()" id="formulario-cotizacion" name="formulario-cotizacion" action="/links/addWebCotation"  method="POST">
+				<span class="color-text contact100-form-title">
+				<i class="far fa-envelope"></i>	Contactanos
+				</span>
+
+				<div class="form-group wrap-input100">
+					<input   id="Nombre_Cliente" class="input100" type="text" name="Nombre_Cliente" placeholder="Nombre Completo" autocomplete="off">
+				
+				</div>
+
+				
+
+				<div class="form-group  wrap-input100">
+
+					<input 	id="Telefono_Cliente"  class="input100"  type="text" name="Telefono_Cliente" placeholder="Número de telefono" autocomplete="off">
+
+
+				
+				
+				</div>
+
+                	<div class="form-group wrap-input100 " >
+											<input id ="Correo_Cliente"  class="input100" type="email" name="Correo_Cliente" placeholder="Correo electronico" autocomplete="off">
+
+				
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+					<textarea  id="Descripcion"   class="input100" name="Descripcion" placeholder="¿Como te podemos ayudar?" autocomplete="off"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button   id="myButton" type="submit" class="contact100-form-btn">
+						<span>
+							<i class="far fa-paper-plane mr-2"></i>
+							Enviar
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #23395D;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+ 
+}
+.card-header{
+
+    background: #23395D;
+    color: white;
+
+}
+.header-title{
+    color: #23395D;
+}

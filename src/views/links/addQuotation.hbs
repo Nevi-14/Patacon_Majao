@@ -1,0 +1,110 @@
+<div class="division-container p-3">
+
+  <div class="row">
+
+    <div class="col-12 col-md-8 mx-auto ">
+      <div id="card" class="card ">
+        <div class="card-body">
+
+
+          <div class="row">
+            <div class="col-12 ">
+              <img src="/images/logo.jpg" alt="Logo Fazt" class="logo-image card-img-top mx-auto m-2 rounded-circle  ">
+
+            </div>
+          
+          </div>
+
+
+          <div class="row mb-4">
+            <div class="col-12">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Información de la cotización</h4>
+                </div>
+                <div class="card-body">
+                 <form action="/links/addQuotation" method="POST">
+        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+
+                                    <label for="Fecha"><i class="far fa-calendar-plus mr-2"></i>Fecha </label>
+                                    <input required name="Fecha_Cotizacion" class="form-control" type="date">
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="Cantidad_Personas"><i class="far fa-users mr-2"></i>Total Personas
+                                    </label>
+                                    <input required type="number" name="Cantidad_Personas" placeholder="Personas"
+                                        autocomplete="off" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="Nombre_Producto"><i class="far fa-user mr-2"></i>Cliente </label>
+                                    <select required name="Cod_Cliente" class="custom-select mb-2 mr-sm-2 mb-sm-0"
+                                        id="inlineFormCustomSelect">
+                                        <option value="" disabled selected>Selecciona un cliente</option>
+                                        {{#each client}}
+                                        <option value="{{Cod_Cliente}}">{{Nombre_Cliente}} {{Primer_Apellido}}</option>
+                                        {{/each}}
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="Cod_Categoria"><i class="far fa-filter mr-2"></i>Categoria</label>
+                                    <select required name="Cod_Tipo_Evento" class="custom-select mb-2 mr-sm-2 mb-sm-0"
+                                        id="inlineFormCustomSelect">
+                                             <option value="" disabled selected>Tipo de evento</option>
+                                        {{#each typeEvent}}
+                                        <option value="{{Cod_Tipo_Evento}}">{{Nombre_Tipo_Evento}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                
+                        <div class="row mt-5">
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="card-button btn"> <i
+                                        class="fas fa-angle-double-right mr-2"></i>Continuar</button> </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+  
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+body,html{
+    height: 100%;
+    color: #043927;
+    font-family: Lato;
+
+    }
+    .addWebCotationImg{
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+    }
+    #navBar {
+      background: #043927 !important;
+    
+    
+    }
+
+  
+    .logo{
+      position: absolute;
+       top: 2px;
+       height: 42px;
+       width: 42px;
+    }
+
+    textarea {
+      resize: none;
+      outline: none;
+      border: none;
+    }
+    textarea:focus, input:focus {
+      border-color: transparent !important;
+      }
+      .jumbotron{
+        border-radius: 2rem;
+        margin: 0 auto;
+        background-color: white;
+      }
+    .btn{
+      outline: none;
+    }
+     

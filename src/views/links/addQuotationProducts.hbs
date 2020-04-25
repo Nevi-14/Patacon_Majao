@@ -1,0 +1,321 @@
+<div class="division-container">
+
+  <div class="row">
+
+    <div class="col-12 col-md-8 mx-auto">
+      <div id="card" class="card">
+        <div class="card-body">
+
+
+          <div class="row">
+            <div class="col-12">
+              <img src="/images/logo.jpg" alt="Logo Fazt" class="logo-image card-img-top mx-auto m-2 rounded-circle  ">
+
+            </div>
+        
+      
+          </div>
+
+    <form action="/links/addQuotationProducts/:{{Cod_Cotizacion}}" method="POST">
+          <div class="row mb-4">
+            <div class="col-12">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Información de la cotización</h4>
+                </div>
+                <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                     <table class="table table-borderless">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                      <tr>
+
+                        <td >Fecha de Cotizacón: {{lastItem.Fecha_Cotizacion}}   </td>
+                      </tr>
+                       <tr>
+
+                        <td>Cotizacón :  <input  id="Cod_Cotizacion" ReadOnly=true name="Cod_Cotizacion"  value="{{lastItem.Cod_Cotizacion}}"  type="text">  </td>
+                      </tr>
+                    
+                
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                            <table class="table table-borderless">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                  <tr>
+
+                        <td>Cliente: {{lastItem.Nombre_Cliente}} {{lastItem.Primer_Apellido}} </td>
+                      </tr>
+                      <tr>
+
+                        <td>Cantidad de personas: {{lastItem.Cantidad_Personas}}</td>
+                      </tr>
+                  
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-12">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Agregar Productos</h4>
+                </div>
+                <div class="card-body">
+                       <div class="row">
+
+
+                        <div class="col-12 col-md-4">
+                            
+
+                            <div class="form-group">
+                                <label for="Nombre_Producto">cantidad de unidades </label>
+                                <input required type="number" name="Cantidad_Producto" placeholder="Unidades" autocomplete="off"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <label for="Nombre_Producto">Seleccionar Producto </label>
+                                <select required name="Cod_Producto" class="custom-select mb-2 mr-sm-2 mb-sm-0"
+                                    id="inlineFormCustomSelect">
+                                        <option value="" disabled selected>Seleccione un producto</option>
+                                    {{#each producto}}
+                                    <option value="{{Cod_Producto}}">{{Nombre_Producto}}</option>
+                                    {{/each}}
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-2">
+
+                            <div class="form-group">
+                                <label for="Nombre_Producto">Precio </label>
+                                <input required type="text" name="Precio_Producto" placeholder="Precio" autocomplete="off"
+                                    class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-md-2">
+                            <div class="form-group">
+                                <label for="">Agregar </label>
+                                <button class="btn btn-outline-primary btn-block ml-2"><i
+                                        class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+           
+               
+
+
+              </div>
+
+
+            </div>
+          </div>
+</form>
+
+
+              <div class="row  mb-3">
+
+
+            <div class="col-12">
+
+              <div class="card">
+
+                <div class="card-header">
+                  <h4>Productos adicionales </h4>
+                </div>
+                <div class="card-body">
+           <div class="table-responsive">
+     <table class="table table-hover">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="3">
+                <h3>Lista productos adicionales</h>
+              </th>
+             
+            </tr>
+           <tr>
+                                                 
+                              
+                               
+                                                    <th scope="col">Nombre producto</th>
+                                            
+                                                    
+                                                        <th scope="col">Borrar</th>
+
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+    
+                            {{#each detalleAdicionales}}
+            <tr>
+
+
+                                                    <td>{{Nombre_Producto}}</td>
+                                       
+                               
+            <td class="text-center"><a href="/links/deleteProductDetail/{{Cod_Cotizacion}}/{{Cod_Producto}}"  class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+
+
+            </tr>
+            {{/each}}
+          </tbody>
+
+
+
+        </table>
+                        </div>
+
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="row  mb-3">
+
+
+            <div class="col-12">
+
+              <div class="card">
+
+                <div class="card-header">
+                  <h4>Productos cotizados </h4>
+                </div>
+                <div class="card-body">
+           <div class="table-responsive">
+     <table class="table table-hover">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="7">
+                <h3>Lita de productos cotizados</h>
+              </th>
+             
+            </tr>
+           <tr>
+                                                 
+                                 <th scope="col">Codigo Producto</th>
+                                                    <th scope="col">Unidades</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Precio Unitario</th>
+                                                  
+                                                    
+                                                    <th scope="col">Subtotal</th>
+                                                    
+                                                        <th scope="col">Borrar</th>
+
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+    
+                            {{#each detalle}}
+            <tr>
+
+
+                                        <td >{{Cod_Producto}}</td>
+                                                    <td>{{Cantidad_Producto}}</td>
+                                                    <td>{{Nombre_Producto}}</td>
+                                                  <td> ₡  {{Precio_Producto}}</td>
+                                                    <td>₡ {{total}}</td>
+            <td class="text-center"><a href="/links/deleteProductDetail/{{Cod_Cotizacion}}/{{Cod_Producto}}"  class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+
+
+            </tr>
+            {{/each}}
+          </tbody>
+   <tfoot>
+           <tr>
+            <td colspan="6"  >Total de cotización: </td>
+         
+                 
+        </tr>
+        <tr>
+
+           <td colspan="5"> {{#each total}}
+                   <td  class=" text-left">₡{{totalFinal}}</td>
+                 {{/each}}
+                </td>
+                 
+        </tr>
+    </tfoot>
+
+
+        </table>
+                        </div>
+
+
+                </div>
+  <div class="card-footer">
+            
+            <div class="row">
+                <div class="col-12">
+       <a   href="/links/showQuotations" class="btn btnRegister"><i class="fas fa-angle-double-right mr-2"></i>Conluir</a>
+                </div>
+
+                </div>
+            </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

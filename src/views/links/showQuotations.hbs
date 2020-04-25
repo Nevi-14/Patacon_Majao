@@ -1,0 +1,67 @@
+<div class="division-container p-5">
+    {{>message}}
+    <div class="card">
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover   mydatatable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th class="text-left" colspan="5">
+                                <h3>Patacon Maja'o cotizaciones</h>
+                            </th>
+                            <th colspan="2"> <a href="/links/addQuotation" class="add-new text-info" role="button"
+                                    aria-pressed="true"><i class="far fa-plus mr-2"></i>Nuevo</a></th>
+
+                        </tr>
+                        <tr>
+
+                            <th scope="col">Fecha Cotizacion</th>
+                            <th scope="col">Cotizacion</th>
+
+                            <th scope="col">Cantidad Personas</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Ver cotización</th>
+                            <th scope="col">Editar cotización</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        {{#each cotizaciones}}
+                        <tr>
+                            <td><i class="text-dark far fa-calendar-alt mr-2"></i> {{fechaCotizacion}}</td>
+                            <td>{{Cod_Cotizacion}}</td>
+
+                            <td>{{Cantidad_Personas}}</td>
+                            <td>{{Nombre_Cliente}}</td>
+                            <td>{{Primer_Apellido}}</td>
+                            <td class="text-center"><a href="/links/showQuotationFile/{{Cod_Cotizacion}}" class="text-info "
+                                    role="button" aria-pressed="true"><i class="far fa-eye"></i></a></td>
+                            <td class="text-center"><a href="/links/addQuotationProducts/{{Cod_Cotizacion}}"  class="text-success"
+                                    role="button" aria-pressed="true"><i class="far fa-cart-plus"></i></a></td>
+
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+
+
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

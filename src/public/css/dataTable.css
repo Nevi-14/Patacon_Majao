@@ -1,0 +1,29 @@
+.dataTables_filter:focus{
+    border: none;
+    outline: none;
+  }
+.table{
+
+width: 95%;
+margin: 0 auto ;
+padding: 0;
+}
+.dataTables_filter{
+    padding: 5px;
+    outline: none;
+grid-template-columns: 1fr ;
+  }
+  .dataTables_length{
+    grid-template-columns: 1fr ;
+
+  }
+  input[type="text"]:disabled{
+    background-color:#FFF;
+}
+
+
+@media screen and (max-width: 767px){
+  div.dataTables_wrapper > div.row > div > div.dataTables_length{
+      display: none;
+  }
+}

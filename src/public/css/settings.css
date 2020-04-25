@@ -1,0 +1,177 @@
+body,html{
+  background: #E4E4E4;  /* fallback for old browsers */
+
+}
+
+.grid-item {
+  margin: 1.5rem;
+}
+
+@media (min-width: 30em) {
+  .grid {
+    display: flex;
+    justify-content: center;
+  
+ 
+  }
+  .grid-item {
+    max-width: 18rem;
+    
+  }
+}
+#logo{
+height: 150px;
+width: 150px;
+
+}
+
+.add-new{
+  float: right;
+  outline: none;
+
+}
+
+/** Card */
+.card-2{
+
+  background: #fbfbfb;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .055);
+  padding: 1.5rem 1rem;
+  text-align: center;
+
+}
+.card-3{
+
+  background: #fbfbfb;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .055);
+  text-align: center;
+  width: 350px;
+}
+.card {
+  background: #fbfbfb;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .055);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: auto;
+}
+.card-add{
+  background: #fbfbfb;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .055);
+  text-align: center;
+
+}
+.card-add .card-header{
+  color: white;
+  background: #23395D;  
+
+}
+#navBar {
+  background: #23395D !important;
+
+
+}
+
+
+
+@media (min-width: 30em) {
+  .card {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (min-width: 30em) {
+  .card-3 {
+    padding: 1rem 1.5rem;
+  }
+  .card-2 {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-3 {
+    padding: 1rem 0.5rem;
+    width: 350px;
+  }
+}
+
+
+/** TODO: Use SVG for graphics */
+.card-graphic {
+  border-radius: .5rem;
+  height: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 66.7%;
+  
+}
+.card-title {
+  font-size: 130%;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 0 .75rem;
+}
+
+.card-button {
+  background: #23395D;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  color:  #fbfbfb;
+  cursor: pointer;
+  font-weight: 500;
+  padding: .5rem 4rem;
+  position: relative;
+  transition-duration: 200ms;
+  transition-property: background, border-color, color;
+}
+.card-header{
+
+  background: #23395D; 
+  color: white;
+}
+.card-button:before,
+.card-button:after {
+  color: #ffd161;
+  display: inline-block;
+  line-height: 1;
+  opacity: 0;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-property: opacity, transform;
+}
+
+
+
+.card-button:focus,
+.card-button:hover {
+  background: #234F1E;
+  color: #fff;
+}
+.card-button:active::after,
+.card-button:focus::after,
+.card-button:hover::after,
+.card-button:active::before,
+.card-button:focus::before,
+.card-button:hover::before {
+  opacity: 1;
+  transform: none;
+}
+
+.card-button abbr {
+  text-decoration: none;
+  outline: none;
+}
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+    }
+    .sr-only{
+        color: black;
+    }
+
+    input[type="text"]:disabled{
+   
+      background-color:#FFF;
+  }

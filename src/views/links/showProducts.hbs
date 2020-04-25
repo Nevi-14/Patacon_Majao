@@ -1,0 +1,67 @@
+<div class="division-container p-5">
+  {{>message}}
+  <div class="card">
+
+    <div class="card-body">
+<div class="table-responsive">
+        <table class="table table-hover   mydatatable">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="4">
+                <h3>Patacon Maja'o productos</h>
+              </th>
+              <th colspan="2"> <a href="/links/addProducts" class="add-new text-info" role="button"
+                  aria-pressed="true"><i class="far fa-plus mr-2"></i>Nuevo</a></th>
+
+            </tr>
+            <tr>
+
+
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+
+              <th scope="col">descripcion</th>
+              <th scope="col">Borrar</th>
+              <th scope="col">Editar</th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+            {{#each producto}}
+            <tr>
+
+              <th>{{Cod_Producto}}</th>
+              <td> {{Nombre_Producto}}</td>
+              <td>{{Precio_Producto}}</td>
+
+              <td>{{Descripcion}}</td>
+              <td class="text-center"><a href="/links/deleteProduct/{{Cod_Producto}}" class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+              <td class="text-center"><a href="/links/editProducts/{{Cod_Producto}}" class="text-info" role="button"
+                  aria-pressed="true"><i class="far fa-edit"></i></a></td>
+
+            </tr>
+            {{/each}}
+          </tbody>
+
+
+
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

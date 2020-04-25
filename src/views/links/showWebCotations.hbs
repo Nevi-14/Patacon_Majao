@@ -1,0 +1,65 @@
+<div class="division-container p-5">
+  {{>message}}
+  <div class="card">
+
+    <div class="card-body">
+<div class="table-responsive ">
+        <table class="table table-hover   mydatatable">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="8">
+                <h3>Patacon Maja'o solicitudes web</h>
+              </th>
+             
+            </tr>
+           <tr>
+                                                 
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Correo</th>
+                                                    <th scope="col">Telefono</th>
+                                                    <th scope="col">Descripcion</th>
+                                                     <th scope="col">Recibida</th>
+                                                        <th scope="col">Borrar</th>
+              <th scope="col">Nuevo</th>
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+            {{#each webCoatations}}
+            <tr>
+
+
+                                                    <td> {{Nombre_Cliente}}</td>
+                                                    <td>{{Correo_Cliente}}</td>
+                                                    <td>{{Telefono_Cliente}}</td>
+                                                    <td>{{Descripcion}}</td>
+                                                    <td><i class="far fa-clock mr-2"></i>{{timeago Fecha_Solicitud}}</td>
+            <td class="text-center"><a href="/links/deleteWebCotation/{{Cod_Solicitud}}" class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+              <td class="text-center"><a href="/links/addWebUser/{{Cod_Solicitud}}" class="text-info" role="button"
+                  aria-pressed="true"><i class="far fa-user-plus"></i></a></td>
+
+            </tr>
+            {{/each}}
+          </tbody>
+
+
+
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

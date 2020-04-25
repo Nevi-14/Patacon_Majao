@@ -1,0 +1,66 @@
+<div class="division-container p-4">
+
+  <div class="row">
+    <div class="col-12 col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+          <h4><i class="fas fa-user-edit mr-2"></i>Editar Cliente</h4>
+        </div>
+        <div class="card-body">
+   <form  onclick="return  validateForm()" action="/links/editCustomer/{{editCod_Cliente.Cod_Cliente}}" method="POST">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 ">
+                  <div class="form-group">
+
+                    <input id="Ced_Cliente"  value="{{editCod_Cliente.Ced_Cliente}}" required name="Ced_Cliente" type="text" class="form-control" placeholder="Cedula *"
+                      />
+                  </div>
+                  <div class="form-group">
+                    <input id="Nombre_Cliente"  value="{{editCod_Cliente.Nombre_Cliente}}" required name="Nombre_Cliente" type="text" class="form-control" placeholder="Nombre *"
+                      />
+                  </div>
+                  <div class="form-group">
+                    <input id="Primer_Apellido" value="{{editCod_Cliente.Primer_Apellido}}"  required name="Primer_Apellido" type="text" class="form-control"
+                      placeholder="Primer Apellido *"  />
+                  </div>
+
+
+                  <div class="form-group">
+                    <input id="Segundo_Apellido" value="{{editCod_Cliente.Segundo_Apellido}}"  required name="Segundo_Apellido" type="text" class="form-control"
+                      placeholder="Segundo Apellido *"  />
+                  </div>
+                  <div class="form-group">
+                    <input id="Correo_Cliente" value="{{editCod_Cliente.Correo_Cliente}}"  required name="Correo_Cliente" type="email" class="form-control" placeholder="Correo *"
+                       />
+                  </div>
+
+                  <div class="form-group">
+                    <input id="Telefono_Cliente" value="{{editCod_Cliente.Telefono_Cliente}}"  required name="Telefono_Cliente" type="text" class="form-control" placeholder="Telefono *"
+                     " />
+                  </div>
+
+                  <button class="btnRegister btn btn-outline-info"><i
+                      class="fas fa-user-edit mr-2"></i>Actualizar</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</div>

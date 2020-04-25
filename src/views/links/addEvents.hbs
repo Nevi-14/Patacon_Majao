@@ -1,0 +1,82 @@
+<div class="division-container p-4">
+
+    <div class="row">
+        <div class="col-12 col-md-7 mx-auto">
+            <div class="card-add text-center">
+    <div class="card-header">
+        <h4 class="text-left">Crear Eventos</h4>
+    </div>                <div class="card-body">
+                    <form action="/links/addEvents" method="POST">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="text-left form-group ">
+
+                                    <label for="Fecha"><i class="far fa-user"></i> Empleado</label>
+                                    <select required name="Ced_Empleado" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                          <option value="" disabled selected>Selecciona un empleado</option>
+                                   {{#each empleado}}
+                                     <option value="{{Ced_Empleado}}" >{{Nom_Empleado}}</option>
+                                   {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                 <div class="text-left form-group">
+
+                                    <label for="Fecha"> <i class="far fa-calendar-alt"></i> Fecha </label>
+                                    <input required name="Fecha_Evento" class="form-control" type="date">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class=" text-left form-group">
+                                    
+                                    <label for="Fecha"><i class="far fa-user-tie"></i> Cliente </label>
+                                  <select required name="Cod_Cotizacion" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                          <option value="" disabled selected>Selecciona un cliente</option>
+                                  {{#each clientes}}
+                                     <option value="{{Cod_Cotizacion}}" >{{Nombre_Cliente}}  {{Primer_Apellido}}</option>
+                                   {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="text-left form-group">
+                                    
+                                    <label for="Fecha"><i class="far fa-filter"></i> Estado </label>
+                                       <select required name="Cod_Estado" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                          <option value="" disabled selected>Estado de evento</option>
+                                         {{#each estado}}
+                                     <option value="{{Cod_Estado}}" >{{Nombre_Estado}}</option>
+                                   {{/each}}>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="text-left form-group">
+                             <label for="comment"> <i class="far fa-home"></i> Direccion</label>
+  <textarea required   name="Direccion_Evento" class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="text-left form-group">
+                                <label for="comment"><i class="far fa-comment"></i> Descripcion</label>
+  <textarea required name="Detalles_Evento" class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+<div class="container d-flex justify-content-end">
+     <button class="btn btn-outline-dark"> <i class="fas fa-plus mr-2"></i>Guardar</button>       </div>
+</div>
+               
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

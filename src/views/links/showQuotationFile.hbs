@@ -1,0 +1,318 @@
+<div class="division-container p-5">
+
+  <div class="row">
+
+    <div class="col-12 col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="/images/logo.jpg" alt="Logo Fazt" class="logo-image card-img-top mx-auto m-2 rounded-circle  ">
+
+            </div>
+            <div class="col-12 col-md-6 ">
+
+              <table class="table table-borderless">
+                <thead>
+
+                </thead>
+                <tbody>
+                  <tr>
+
+                    <td>
+                      <h4>Cotizacion #: {{cotizacion.Cod_Cotizacion}}</h4>
+                    </td>
+                  </tr>
+                  <tr>
+
+                    <td>Contacto: 8860-3003</td>
+                  </tr>
+                  <tr>
+
+                    <td>Correo: sanvalle29@gmail.com </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+
+          <div class="row mb-4">
+            <div class="col-12">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Información de la cotización</h4>
+                </div>
+                <div class="card-body">
+                  <table class="table table-borderless">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                      <tr>
+
+                        <td>Fecha de Cotizacón: {{cotizacion.fechaCotizacion}} </td>
+                      </tr>
+                      <tr>
+
+                        <td>Cliente: {{cotizacion.Nombre_Cliente}} {{cotizacion.Primer_Apellido}} </td>
+                      </tr>
+                      <tr>
+
+                        <td>Cantidad de personas: {{cotizacion.Cantidad_Personas}}</td>
+                      </tr>
+                      <tr>
+
+                        <td>Tipo de evento: {{cotizacion.Nombre_Tipo_Evento}} </td>
+                      </tr>
+                    </tbody>
+
+                    
+                  </table>
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-12">
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Descripción del producto</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+
+                      <thead>
+                        <tr>
+
+
+                          <th scope="col">Concepto:</th>
+
+
+                        </tr>
+                      </thead>
+
+                      {{#each detalle}}
+
+                      <tbody>
+                        <tr>
+
+
+                          <td>{{Concepto}}</td>
+
+
+                        </tr>
+
+                      </tbody>
+
+                      {{/each}}
+                    </table>
+
+                  </div>
+
+
+                </div>
+              
+            
+
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="row  mb-3">
+
+
+            <div class="col-12">
+
+              <div class="card">
+
+                <div class="card-header">
+                  <h4>Productos adicionales </h4><br>
+                </div>
+                <div class="card-body">
+           <div class="table-responsive">
+     <table class="table ">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="3">
+                <h3>Lista productos adicionales</h>
+              </th>
+             
+            </tr>
+            
+           <tr>
+                                                 
+                              
+                               
+                                                    <th scope="col">Nombre producto</th>
+                                            
+                                                    
+                                                     
+
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+    
+                            {{#each detalleAdicionales}}
+            <tr>
+
+
+                                                    <td>{{Nombre_Producto}}</td>
+                                       
+
+
+            </tr>
+            {{/each}}
+          </tbody>
+<tfoot>
+    <tr>
+      <td colspan="3" >Bebidas imitadas tiene 3 opciones a elegir</td>
+    </tr>
+  </tfoot>
+
+
+        </table>
+                        </div>
+
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="row  mb-3">
+
+
+            <div class="col-12">
+
+              <div class="card">
+
+                <div class="card-header">
+                  <h4>Productos cotizados </h4>
+                </div>
+                <div class="card-body">
+           <div class="table-responsive">
+     <table class="table">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="4">
+                <h3>Lita de productos cotizados</h>
+              </th>
+             
+            </tr>
+           <tr>
+                            
+                                                    <th scope="col">Unidades</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Precio Unitario</th>
+                                                  
+                                                    
+                                                    <th scope="col">Subtotal</th>
+                                                    
+
+
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+    
+                            {{#each detalle}}
+            <tr>
+
+
+                                    
+                                                    <td>{{Cantidad_Producto}}</td>
+                                                    <td>{{Nombre_Producto}}</td>
+                                                  <td> ₡  {{Precio_Producto}}</td>
+                                                    <td>₡ {{total}}</td>
+
+
+
+            </tr>
+            {{/each}}
+          </tbody>
+   <tfoot>
+           <tr>
+            <td colspan="4"  >Total de cotización: </td>
+         
+                 
+        </tr>
+        <tr>
+
+           <td colspan="3"> {{#each total}}
+                   <td  class=" text-left">₡{{totalFinal}}</td>
+                 {{/each}}
+                </td>
+                 
+        </tr>
+
+        
+    </tfoot>
+
+
+        </table>
+                        </div>
+
+
+                </div>
+  <div class="card-footer">
+            
+            <div class="row">
+                <div class="col-12">
+       <a   href="/links/showQuotations" class="btn btnRegister"><i class="fas fa-angle-double-right mr-2"></i>Conluir</a>
+                </div>
+
+                </div>
+            </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

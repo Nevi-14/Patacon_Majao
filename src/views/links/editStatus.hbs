@@ -1,0 +1,59 @@
+<div class="division-container p-4">
+
+    <div class="row mt-5">
+        <div class="col-12   mx-auto">
+            <main class="grid" role="main">
+                <div class="card">
+                    <div class="card-graphic"><img src="/images/status.png" alt=""></div>
+                    <h1 class="card-title">Editar Estado</h1>
+                    <form onclick="return addStatus()" action="/links/editStatus/{{status.Cod_Estado}}" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <input id="Cod_Estado" type="text" value="{{status.Cod_Estado}}" name="Cod_Estado"
+                                        placeholder="Codigo Rol*" class="form-control" disabled>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <input id="Nombre_Estado" type="text" name="Nombre_Estado"
+                                        value="{{status.Nombre_Estado}}" placeholder="Descripcion Rol*"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button type="submit" class="card-button btn ">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+
+            </main>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,118 @@
+<div class="division-container p-5">
+
+    <div class="row mt-5">
+   <div class="col-12 col-md-4 mb-3">
+            <main class="grid" role="main">
+              <div class="card">
+                <div class="card-graphic"><img src="/images/categories.png" alt=""></div>
+                <h1 class="card-title">Agregar Categorias</h1>
+ <form  onclick="return addCategory()" role="form" method="POST" action="/links/addCategory">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                               
+                                    <input id="Cod_Categoria"  type="text" name="Cod_Categoria" placeholder="Codigo Categoria*" class="form-control"
+                                        autofocus>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                   
+                                    <input id="Nombre_Categoria" type="text" name="Nombre_Categoria" placeholder="Descripcion Categoria*" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="form-group">
+                       <button  type="submit" class="card-button btn ">Guardar</button>
+                            </div>
+                            </div>
+                        </div>
+
+                   </form>
+              </div>
+
+
+
+
+            </main>
+
+   </div>
+
+<div class="col-12 col-md-8 ">
+
+  <div class="card-2 mx-auto">
+
+    <div class="card-body">
+<div class="table-responsive ">
+        <table class="table table-hover   mydatatable">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="4">
+                <h3>Patacon Maja'o categoria de productos</h>
+              </th>
+             
+            </tr>
+           <tr>
+                                                 
+                                                  
+                                                     <th scope="col">Codigo categoria</th>
+                                    <th scope="col">Descripcion categoria</th>
+                                                        <th scope="col">Borrar</th>
+              <th scope="col">Nuevo</th>
+                                                </tr>
+          </thead>
+
+
+          <tbody>
+    
+                            {{#each categories}}
+            <tr>
+
+
+                                                <td>{{Cod_Categoria}}</td>
+                                   <td>{{Nombre_Categoria}}</td>
+            <td class="text-center"><a href="/links/deleteCategory/{{Cod_Categoria}}" class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+              <td class="text-center"><a href="/links/editCategory/{{Cod_Categoria}}" class="text-info" role="button"
+                  aria-pressed="true"><i class="far fa-edit"></i></a></td>
+
+            </tr>
+            {{/each}}
+          </tbody>
+
+
+
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+</div>

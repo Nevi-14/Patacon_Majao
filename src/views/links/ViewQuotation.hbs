@@ -1,0 +1,188 @@
+<div class="row p-4">
+    <div class="col-12 col-md-7 mx-auto">
+        <div class="card text-center">
+            <div class="card-header text-left">
+                <h4>Cotización</h4>
+            </div>
+      <div class="row">
+<div class="col-4">
+    <img src="/images/logo.jpg" alt="Logo Fazt" class="logo-image card-img-top mx-auto m-2 rounded-circle  ">
+</div>
+<div class="col-8 p-4">
+<table style="text-left p-0 width:100%">
+  <tr>
+    <td>Contacto: 8860-3003</td>
+    <td>Correo: sanvalle29@gmail.com</td>
+  </tr>
+  <tr>
+<td>Correo: sanvalle29@gmail.com</td>
+  </tr>
+</table>
+
+</div>
+
+      </div>
+            <div class="card-body text-left">
+
+                <form action="/links/addQuotationProducts" method="POST">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="Cod_Cotizacion">Numero de Cotizacion </label>
+                                <input type="text"
+                                    value="{{lastItem.Cod_Cotizacion}}"
+                                    name="Cod_Cotizacion" autocomplete="off" placeholder="Codigo Solicitud"
+                                    class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="Fecha_Cotizacion">Fecha de Cotizacion </label>
+                                <input type="text" name="Fecha_Cotizacion" value="{{lastItem.Fecha_Cotizacion}}"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                               <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="Nombre_Producto">Cliente </label>
+                                <input type="text"
+                                    value="{{lastItem.Nombre_Cliente}} {{lastItem.Primer_Apellido}}  {{lastItem.Segundo_Apellido}}"
+                                    name="Nombre_Producto" autocomplete="off" placeholder="Codigo Solicitud"
+                                    class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="Cantidad_Personas">Total de personas </label>
+                                <input type="text" name="Cantidad_Personas" value="{{lastItem.Cantidad_Personas}}"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+
+                        <div class="col-12 col-md-4">
+                            
+
+                            <div class="form-group">
+                                <label for="Nombre_Producto">cantidad de unidades </label>
+                                <input type="number" name="Cantidad_Producto" placeholder="Unidades" autocomplete="off"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-9 col-md-4">
+                            <div class="form-group">
+                                <label for="Nombre_Producto">Seleccionar Producto </label>
+                                <select name="Cod_Producto" class="custom-select mb-2 mr-sm-2 mb-sm-0"
+                                    id="inlineFormCustomSelect">
+                                    <option>Selecciona Producto</option>
+                                    {{#each producto}}
+                                    <option value="{{Cod_Producto}}">{{Nombre_Producto}}</option>
+                                    {{/each}}
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2">
+
+                            <div class="form-group">
+                                <label for="Nombre_Producto">Precio </label>
+                                <input type="text" name="Precio_Producto" placeholder="Precio" autocomplete="off"
+                                    class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-3 col-md-2">
+                            <div class="form-group">
+                                <label for="">Agregar </label>
+                                <button class="btn btn-outline-primary btn-block ml-2"><i
+                                        class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+
+
+                <div class="row ">
+                    
+
+                    <div class="col-12">
+                        
+                        <div class="table-responsive">
+            <table class="table">
+
+                                            <thead>
+                                                <tr>
+                                                   
+                                                
+                                                    <th scope="col">Unidades</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Precio Unitario</th>
+                                                  
+                                                    
+                                                    <th scope="col">Subtotal</th>
+                                             
+                                                </tr>
+                                            </thead>
+
+                                            {{#each detalle }}
+
+                                            <tbody>
+                                                <tr>
+
+                                                
+                                                 
+                                                    <td>{{Cantidad_Producto}}</td>
+                                                    <td>{{Nombre_Producto}}</td>
+                                                  <td> ₡  {{Precio_Producto}}</td>
+                                                 
+                                                   
+                                                   
+                                                    <td>₡ {{total}}</td>
+                                                
+
+
+                                            
+                                                </tr>
+
+                                            </tbody>
+
+                                            {{/each}}
+                                        </table>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+ 
+
+            </div>
+        <div class="card-footer">
+            
+            <div class="row">
+                <div class="col-8">
+                        <h4 class=" text-left">Total ₡ {{#each total}}
+                   <td>{{totalFinal}}</td>
+                 {{/each}}
+                </h4>
+                </div>
+                <div class="col-4">
+                      <a href="#" class=" btnRegister"><i class="fas fa-file-download mr-2"></i>Decargar</a>       </div>
+                </div>
+            </div>
+            </div>
+
+
+
+        </div>

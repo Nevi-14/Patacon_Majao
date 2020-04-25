@@ -1,0 +1,69 @@
+<div class="division-container p-5">
+  {{>message}}
+  <div class="card">
+
+    <div class="card-body">
+<div class="table-responsive">
+        <table class="table table-hover   mydatatable">
+
+          <thead>
+
+            <tr>
+
+              <th class="text-left" colspan="6">
+                <h3> Patacon Maja'o empleados</h>
+              </th>
+              <th colspan="2"> <a  href="/links/addEmployees" class="add-new text-info" role="button"
+                  aria-pressed="true"><i class="far fa-user-plus mr-2"></i>Nuevo</a></th>
+
+            </tr>
+            <tr>
+
+
+                                <th scope="col">Cedula</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Primer Apellido</th>
+                                                <th scope="col">Segundo Apellido</th>
+                                                <th scope="col">Correo</th>
+                                                <th scope="col">Telefono</th>
+              <th scope="col">Borrar</th>
+              <th scope="col">Editar</th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+   
+                            {{#each employees}}
+            <tr>
+  <td> {{Ced_Empleado}}</td>
+                                                <td>{{Nom_Empleado}}</td>
+                                                <td>{{Primer_Apellido}}</td>
+                                                <td>{{Segundo_Apellido}}</td>
+                                                <td>{{Correo_Empleado}}</td>
+                                                <td>{{Telefono_Empleado}}</td>
+              <td class="text-center"><a href="/links/deleteEmployees/{{Ced_Empleado}}" class="text-danger " role="button"
+                  aria-pressed="true"><i class="far fa-trash-alt"></i></a></td>
+              <td class="text-center"><a href="/links/editEmployees/{{Ced_Empleado}}" class="text-info" role="button"
+                  aria-pressed="true"><i class="far fa-edit"></i></a></td>
+
+            </tr>
+            {{/each}}
+          </tbody>
+
+
+
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

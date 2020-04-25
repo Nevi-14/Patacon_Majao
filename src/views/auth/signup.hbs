@@ -1,0 +1,79 @@
+<div class="division-container p-5">
+
+  <div class="row d-flex justify-content-around">
+
+
+    <div class="col-12 ">
+      <main class="d-flex justify-content-center" role="main">
+        <div class="card-3 ">
+          <div class="card-graphic"><img src="/images/profile.png" alt=""></div>
+          <h1 class="card-title">Crear Login</h1>
+          <form  onclick="return signUP()" action="/signup" method="POST">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group ">
+
+                    <select id="Ced_Empleado" name="Ced_Empleado" class="form-control" id="Cod_Categoria">
+                      <option disabled selected>Empleado</option>
+                      {{#each empleados}}
+                      <option value="{{Ced_Empleado}}">{{Nom_Empleado}} {{Primer_Apellido}} </option>
+                      {{/each}}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <select id="Cod_Rol" name="Cod_Rol" class="form-control" id="empleado">
+                      <option  disabled selected>Tipo de usuario</option>
+                      {{#each roles}}
+                      <option value="{{Cod_Rol}}">{{Tipo_Rol}}</option>
+                      {{/each}}
+
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input id="Usuario" name="Usuario" type="text" class="form-control"
+                      placeholder="Nombre de usuario *" value="" />
+                  </div>
+                  <div class="form-group">
+                    <input id="Contrasena" type="password" name="Contrasena" class="form-control"
+                      placeholder="Contraseña  *" value="" />
+                  </div>
+
+
+
+                  <button type="submit" class="card-button btn ">Crear</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </form>
+  </div>
+
+
+
+
+  </main>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
